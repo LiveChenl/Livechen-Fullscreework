@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通信软件开发与应用</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p></p><div class="toc"><h3>《通信软件开发与应用》课程结业报告</h3><ul><li><a href="#_2">一、网站主题</a></li><li><a href="#_5">二、开发过程</a></li><ul><li><a href="#1_6">(1)导航条页面设置</a></li><li><a href="#2_9">(2)页面主体设置</a></li><li><a href="#3_14">(3)邮件联系</a></li><li><a href="#4_23">(4)报告设置</a></li></ul><li><a href="#_32">三、开发过程遇到问题及其解决方法</a></li><ul><li><a href="#1_33">(1)在文件夹中的图片用相对路径为何不能显示</a></li><li><a href="#2_35">(2)为何网页中的有些图片直接添加绝对路径不能显示</a></li><li><a href="#3indexvscode_37">(3)直接在文件里面打开index仍然是没有修改之前的原始网站，我必须要在vscode里面打开才能显示修改后的网站？</a></li><li><a href="#4_39">(4)修改字体颜色</a></li></ul><li><a href="#_41">四、开发过程未解决的问题</a></li><ul><li><a href="#1_42">(1)添加背景图片</a></li><li><a href="#2_44">(2)底部有趣的看似图片的东西在哪里查看图片</a></li><li><a href="#3_46">(3)邮件联系部分</a></li><li><a href="#4_48">(4)怎么给自己添加自己想要的颜色，而不仅仅是红色，黄色，绿色这种单一色彩</a></li><li><a href="#5html_49">(5)再打开一个新的`html`文件之后我不知道怎么设置在返回的时候并关闭这个窗口，我感觉这样一直打开，会有许多网页一直堆叠</a></li></ul><li><a href="#_51">五、总结</a></li></ul></div><p></p>
+<h1><a id="_2"></a>一、网站主题</h1>
+<ul>
+<li><strong>主题</strong>：网站主要是介绍关于我最喜欢的几位篮球运动员，科比，哈登，杜兰特	，姚明，易建联，还有当时2008年奥运会男篮最辉煌的一代。主要讲解他们基本信息、社会活动、人物评价、篮球生涯中最精彩的比赛等等信息</li>
+</ul>
+<h1><a id="_5"></a>二、开发过程</h1>
+<h2><a id="1_6"></a>(1)导航条页面设置</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210619183631595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgzMjI0NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+前面6个页面是关于内容的展示，点击之后会跳转到下面进行显示，我这里没有直接在导航条设置新的<code>html</code>的<code>URL</code>,我感觉这样直接跳转不平滑。我在下面的主体部分进行跳转，对应每一个人物。最后一个页面是结业报告，右上角<code>Fackbook</code>、<code>Twitter</code>,可以进行点击进入，但是要科学上网。</p>
+<h2><a id="2_9"></a>(2)页面主体设置</h2>
+<p><img src="https://img-blog.csdnimg.cn/2021061918403874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgzMjI0NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+主页里面我就设置比较简单，直接显示图片，点击<code>LEARN MORE</code>会进入到对应人物的特定主页，进行具体信息的了解。<br>
+<img src="https://img-blog.csdnimg.cn/20210619184326929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgzMjI0NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+点击<code>HOME</code>会返回原来的主页</p>
+<h2><a id="3_14"></a>(3)邮件联系</h2>
+<p><img src="https://img-blog.csdnimg.cn/2021061918445413.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgzMjI0NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<pre><code class="prism language-javascript">              <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a     href<span class="token operator">=</span><span class="token string">"mailto:632559679@qq.com "</span><span class="token operator">&gt;</span> send mail<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+</code></pre>
+<p>我这里采用的是html中代码，发送邮件</p>
+<h2><a id="4_23"></a>(4)报告设置</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210619184517201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgzMjI0NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<pre><code class="prism language-javascript">              <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>a  href<span class="token operator">=</span><span class="token string">"file:///E:/Fullscreenworks/MDB-Pro-4.12/%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BE%8E%E5%8C%96CSS%20(3).html"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span><span class="token operator">&gt;</span>《通信软件开发与应用》课程结业报告<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span> 
+</code></pre>
+<p>直接采用超链接的方式，将报告的地址输入在<code>html</code>文件中，打开另外一个空白窗口进行显示</p>
+<h1><a id="_32"></a>三、开发过程遇到问题及其解决方法</h1>
+<h2><a id="1_33"></a>(1)在文件夹中的图片用相对路径为何不能显示</h2>
+<p><strong>解决</strong>：再添加路径时，把图片的路径添加错了，所有图片都放在<code>IMG</code>面的<code>My img</code>,直接在<code>IMG</code>中寻找图片，结果没找到</p>
+<h2><a id="2_35"></a>(2)为何网页中的有些图片直接添加绝对路径不能显示</h2>
+<p><strong>解决</strong>：这个问题我没有得到正确的解决方法，我不知道为啥有些图片我添加网页的链接不能正常显示图片，最后我采用把图片放在文件夹中，通过相对路径的方式显示</p>
+<h2><a id="3indexvscode_37"></a>(3)直接在文件里面打开index仍然是没有修改之前的原始网站，我必须要在vscode里面打开才能显示修改后的网站？</h2>
+<p><strong>解决</strong>：不太清楚具体原因，我原来使用Open with livesever打开，后来我使用Open with default browers后好像此问题就解决了</p>
+<h2><a id="4_39"></a>(4)修改字体颜色</h2>
+<p><strong>解决</strong>：直接在text前面添加颜色就行了，这里纯属是由于自己好久没用了，遗忘了。</p>
+<h1><a id="_41"></a>四、开发过程未解决的问题</h1>
+<h2><a id="1_42"></a>(1)添加背景图片</h2>
+<p>本来想为每一个主题的背景添加一张背景图，我采用<code>style="background-image: url();"</code>的方式进行添加，但是添加之后没有效果，应该是添加的方法错了</p>
+<h2><a id="2_44"></a>(2)底部有趣的看似图片的东西在哪里查看图片</h2>
+<p>比如像代表<code>Facebook</code>、<code>Twitter</code>的那些图标，我不知道在哪里查看然后添加</p>
+<h2><a id="3_46"></a>(3)邮件联系部分</h2>
+<p>我感觉采用我这种邮件的联系方式比较死板，不太能够进行具体的应用，但是我没有找到更好的发送方式，就没有进行修改</p>
+<h2><a id="4_48"></a>(4)怎么给自己添加自己想要的颜色，而不仅仅是红色，黄色，绿色这种单一色彩</h2>
+<h2><a id="5html_49"></a>(5)再打开一个新的<code>html</code>文件之后我不知道怎么设置在返回的时候并关闭这个窗口，我感觉这样一直打开，会有许多网页一直堆叠</h2>
+<h1><a id="_51"></a>五、总结</h1>
+<p><strong>总结</strong>：<br>
+　　此次网页的开发是以棋歌教学网全屏作品网站教学为初始模板进行修改完成，作品分成了7个页面进行介绍，导航条部分用于进行定位寻找，页面主体有六个页面分别介绍了主题的核心内容，最后一个页面用于联系和该实验报告的链接。<br>
+　　点击导航条会进入对应的每一个球星页面，但是不会直接进行具体信息的显示，在页面点击<code>LEARN MORE</code>会进入对应的具体页面，点击右上方<code>HOME</code>会返回主页面。<br>
+　　在完成任务时遇到了一个问题，我觉得很不理解。最开始我把所有图片直接放在IMG文件夹下面，但是我在Vs Code里面引用图片时，图片始终没有，最后我就采用了直接用网页添加绝对路径的方式。后面我来添加文字时，无疑当中发现以前文件夹里面的图片又可以用了，这是让我感到比较疑惑的一个点。<br>
+　　总之此次大作业任务基本完成，当然也还有许多地方值得学习与改进！</p>
+</div>
+</body>
+
+</html>
